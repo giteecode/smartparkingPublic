@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- 定义时间戳 -->
+<div th:fragment="foot(script)"  th:with="time=20200429">
+    <!---jquery--->
+    <script th:if="${#strings.contains(script,'jquery')}"
+            type="text/javascript" th:src="@{/lib/common/jquery.js}"></script>
+    <!---tree--->
+    <script th:if="${#strings.contains(script,'tree')}"
+            type="text/javascript" th:src="@{/lib/ztree/jquery.ztree.all.min.js}"></script>
+
+    <script th:if="${#strings.contains(script,'weixin')}"
+            src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script th:if="${#strings.contains(script,'currencyFormatter')}"
+            th:src="@{/js/currencyFormatter.min.js}"></script>
+    <script type="text/javascript" th:src="@{/lib/layui/layui.js}"></script>
+    <script type="text/javascript" th:src="@{/lib/vue/vue.min.js}" ></script>
+    <script type="text/javascript" th:src="@{/lib/iview/iview.min.js}"></script>
+</div>
+</html>

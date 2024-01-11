@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(link)">
+    <title></title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" th:href="@{/images/favicon.ico}" type="image/x-icon"/>
+    <meta name="author" th:content="park" />
+    <meta name="site" content="http" />
+    <link rel="stylesheet" th:href="@{/css/oksub.css}">
+    <link rel="stylesheet" th:href="@{/lib/iview/styles/iview.css}">
+    <!---tree--->
+	<link th:if="${#strings.contains(link,'tree')}"
+          rel="stylesheet" th:href="@{/lib/ztree/css/metroStyle/metroStyle.css}">
+    <!---awesome--->
+    <link th:if="${#strings.contains(link,'awesome')}"
+          rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+    <style type="text/css">
+        [v-cloak] {
+          display: none;
+        }
+        .ivu-input-number{
+            width: 150px;
+        }
+    </style>
+</head>
+</html>
